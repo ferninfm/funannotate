@@ -233,8 +233,8 @@ def parseEggNoggMapper(input, output, GeneDict):
                 OGs = cols[OGi].split(',')
                 NOG = ''
                 for x in OGs:
-                    #if DB in x:
-                    NOG = 'ENOG41' + x.split('@')[0]
+                    if DB in x:
+                        NOG = 'ENOG41' + x.split('@')[0]
                 Gene = ''
                 if cols[Genei] != '':
                     if not '_' in cols[Genei] and not '.' in cols[Genei] and number_present(cols[Genei]) and len(cols[Genei]) > 2 and not morethanXnumbers(cols[Genei], 3):
